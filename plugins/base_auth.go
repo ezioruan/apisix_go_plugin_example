@@ -7,7 +7,6 @@ import (
 	"strings"
 
 	pkgHTTP "github.com/apache/apisix-go-plugin-runner/pkg/http"
-	"github.com/davecgh/go-spew/spew"
 )
 
 // Say is a demo to show how to return data directly instead of proxying
@@ -66,7 +65,6 @@ func parseBasicAuth(auth string) (username, password string, ok bool) {
 	const prefix = "Basic "
 	// Case insensitive prefix match. See Issue 22736.
 	if len(auth) < len(prefix) || !strings.EqualFold(auth[:len(prefix)], prefix) {
-		spew.Dump("not match")
 		return
 	}
 	c, err := base64.StdEncoding.DecodeString(auth[len(prefix):])

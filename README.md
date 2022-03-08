@@ -37,7 +37,7 @@ The following data is returned to indicate that Apache APISIX was successfully s
 
 ### create a test routes with and enable the plugin
 
-`
+```
 curl --location --request PUT 'http://127.0.0.1:9080/apisix/admin/routes/1' \
 --header 'X-API-KEY: edd1c9f034335f136f87ad84b625c8f1' \
 --header 'Content-Type: application/json' \
@@ -62,7 +62,7 @@ curl --location --request PUT 'http://127.0.0.1:9080/apisix/admin/routes/1' \
 }'
 
 
-`
+```
 
 ### Go to `http://127.0.0.1:9080/get` and you'll need to provide username and password. otherwise it will give you an 401 error
 
